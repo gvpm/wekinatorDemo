@@ -28,7 +28,7 @@ void draw()
 {
   background(300);
   sensorRead = arduino.analogRead(sensor);
-  
+
   potentiometerRead = arduino.analogRead(potentiometer);
   
   
@@ -36,10 +36,10 @@ void draw()
   msg.add((float)sensorRead); 
   msg.add((float)potentiometerRead);
   oscP5.send(msg, dest);
-  //stroke(0);
-  //textFont(myBigFont);
-  text("Sensor  "+sensorRead, 190, 180);
-  text("Pot  "+potentiometerRead, 190, 250);
+  stroke(0);
+  textFont(myBigFont);
+  text("Sensor  "+sensorRead, 10, 180);
+  text("Pot  "+potentiometerRead, 10, 250);
   
   
 
