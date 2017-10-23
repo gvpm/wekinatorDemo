@@ -13,8 +13,8 @@ PFont myBigFont;
 
 void setup()
 {
-  //println(Arduino.list());
-  arduino = new Arduino(this, Arduino.list()[0], 57600);
+  println(Arduino.list());
+  arduino = new Arduino(this, Arduino.list()[1], 57600);
   arduino.pinMode(sensor, Arduino.INPUT);
   arduino.pinMode(potentiometer, Arduino.INPUT);
   /* start oscP5, listening for incoming messages at port 12000 */
